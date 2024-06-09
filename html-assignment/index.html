@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Assignment liu00682</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <header>
-        <h1>Zixuan Liu</h1>
+        <h1 class="site-title">Zixuan Liu</h1>
     </header>
+    <section>
+        <h2>Navigation</h2>
+        <nav>
+            <ul class="navigation-list">
+               <li><a href="#image">Image</a></li>
+               <li><a href="#hobbies">Hobbies</a></li>
+               <li><a href="#notepage">Notepage</a></li>
+            </ul>
+        </nav>
+    </section>
     <article>
         <h2>About Me</h2>
         <h3>Welcome to my website!</h3>
@@ -20,18 +31,18 @@
         </p>
         <blockquote> <strong>Time never goes back to square one, but it can be a new beginning.</strong> <cite>Zixuan Liu(Xenia)</cite></blockquote>
     </article>
-    <section>
+    <section id="image">
         <h4>Image</h4>
-        <img src="images/photo-luoyang.jpg" alt="photo in Luoyang">
+        <img src="images/photo-luoyang.jpg" alt="photo in Luoyang" id="my-image">
     </section>
-    <section>
+    <section id="hobbies">
         <h4>Hobbies</h4>
-        <ul>
+        <ul class="hobby-list">
             <li>Musical instruments</li>
             <li>Volleyball</li>
         </ul>
     </section>
-    <section>
+    <section id="notepage">
         <h4>Notes Page</h4>
             <p>Read the HTML tags with description in <a href="notes.html" target="_blank">Notes Page</a></p>
     </section>
