@@ -1,0 +1,152 @@
+/* Sets fonts and alternate fonts for the entire text and setting the background of the entire page */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #aad4cf;
+}
+
+/* adjusts font size, weight and color for h1, and uses position property to locate the h1 */
+header h1 {
+    font-size: 4em;
+    font-weight: normal;
+    position: fixed;
+    color: white;
+    left: 440px;
+    top: 160px;
+}
+
+/* adjusts the top image to make it fix the wrapper */
+header img {
+    width: 974px;
+    height: 323px;
+}
+
+/* uses position property to make the header fixed on the page with scrolling, and overlay the text on top of the image */
+header {
+    position: fixed;
+    z-index: 0;
+}
+
+/* adds padding to make sure the content below the header after using fixed position property */
+.navlist {
+    padding-top: 325px;
+}
+
+/* wrapper centers and adds width to content */
+.wrapper {
+    background-color: #d4e9e7;
+    width: 974px;
+    margin: 0px auto;
+}
+
+/* adds padding for the content below the navigations and makes them closer to the navigations */
+.padding {
+    padding: 10px;
+    position:relative;
+    bottom: 40px;
+}
+
+/* removes the default decoration of the link text */
+.navlist a {
+    text-decoration: none;
+    color: black;
+}
+
+/* removes the default style of lists and lines them up horizontally with proper box model */
+.navlist li {
+   list-style: none;
+   display: inline-block;
+   padding: 10px;
+   width: 210px;
+   height: 60px;
+   box-sizing: border-box;
+   font-size: 1.5em;
+}
+
+/* locates each navigation list using position property to make them balance */
+.navlist li:nth-child(3) {
+    position: relative;
+    left: 290px;
+}
+
+.navlist li:nth-child(2) {
+    position: relative;
+    left: 190px;
+}
+
+.navlist li:nth-child(1) {
+    position: relative;
+    left: 70px;
+}
+
+/* adds border between each of navigations and adjust the with of the border */
+.navlist li:nth-child(1),  .navlist li:nth-child(2) {
+    border-right-color: black;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+/* adjusts the font size for h2 */
+h2 {
+    font-size: 2em;
+}
+
+/* adjusts the size and padding for the image and article, and makes the text around the image */
+article img {
+    width: 238px;
+    height: 244px;
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+article {
+    padding-right: 10px;
+    line-height: 1.3em;
+}
+
+/* adjusts the font size for h3 */
+h3 {
+    font-size: 1.5em;
+}
+
+/* adjusts the lists of facts to make them left-align and closer to h3 */
+.padding section:nth-child(2) li {
+    position:relative;
+    right: 25px;
+    bottom: 10px
+}
+
+/* adds border for the form section and leaves more space for each line */
+.form {
+    border-style: solid;
+    padding: 10px;
+    padding-top: 30px;
+    border-width: 1.5px;
+    line-height: 2em;
+}
+
+/* makes the input square larger */
+#fullname, #email, #message {
+    width: 919px;
+}
+
+#message {
+    height: 100px;
+}
+
+/* removes the default decoration of the button and adds padding and border for it */
+.form p a {
+    text-decoration: none;
+    color: black;
+    border-style: solid;
+    padding: 16px 13px;
+    border-width: 1.5px;
+}
+
+/* makes the footer right-align and leaves more space for it */
+footer {
+    text-align: right;
+    margin: 10px;
+    position:relative;
+    top: 25px;
+}
