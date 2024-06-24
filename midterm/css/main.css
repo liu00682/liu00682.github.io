@@ -10,14 +10,13 @@ header h1 {
     font-weight: normal;
     position: fixed;
     color: white;
-    left: 440px;
-    top: 160px;
+    left: 35%;
+    top: 26%;
 }
 
 /* adjusts the top image to make it fix the wrapper */
 header img {
     width: 974px;
-    height: 323px;
 }
 
 /* uses position property to make the header fixed on the page with scrolling, and overlay the text on top of the image */
@@ -56,7 +55,7 @@ header {
    list-style: none;
    display: inline-block;
    padding: 10px;
-   width: 210px;
+   width: 23%;
    height: 60px;
    box-sizing: border-box;
    font-size: 1.5em;
@@ -65,17 +64,17 @@ header {
 /* locates each navigation list using position property to make them balance */
 .navlist li:nth-child(3) {
     position: relative;
-    left: 290px;
+    left: 30%;
 }
 
 .navlist li:nth-child(2) {
     position: relative;
-    left: 190px;
+    left: 20%;
 }
 
 .navlist li:nth-child(1) {
     position: relative;
-    left: 70px;
+    left: 10%;
 }
 
 /* adds border between each of navigations and adjust the with of the border */
