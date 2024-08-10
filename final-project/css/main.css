@@ -1,0 +1,563 @@
+/* add border box to all elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* set defaut font size */
+html {
+    font-size: 16px;
+}
+
+/* mobile/default has no media query */
+/* use "Open Sans" Google font for the webpage and set the line height and font weight */
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+/* set font size and style for headings and articles */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 750;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 750;
+}
+
+h4 {
+    font-size: 0.8rem;
+    font-weight: 750;
+}
+
+p {
+    font-size: 0.7rem;
+}
+
+/* set maximum width of the container is 1200px and center the content */
+.wrapper {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* add full width black background color to navigation and yellow background color within the container for logo, and add color space for both of them */
+nav {
+    background-color: #222;
+    padding: 10px 0;
+    font-weight: 500;
+}
+
+nav h1 {
+    background-color: #c78c06;
+    padding: 10px 0;
+}
+
+/* make the navigation list center the vertical line and leave top and bottom space */
+nav ul li {
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* remove the default underline from links and change the font color */
+nav ul li a {
+    text-decoration: none;
+    color: #c78c06;
+}
+
+/* add yellow background color for the first nav list and change font color */
+nav ul li:nth-child(1) {
+    background-color: #c78c06;
+}
+
+nav ul li:nth-child(1) a {
+    color: #222;
+}
+
+/* use flex to make the search form match container width but not affect icon on the right */
+nav form {
+    display: flex;
+}
+
+nav form input {
+    flex-grow: 1;
+}
+
+/* adjust icon style and color, add border to icon */
+i.fa-magnifying-glass {
+    text-decoration: none;
+    color: #c78c06;
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px;
+}
+
+/* add image to background for header, adjust background image display style and size */
+/* use flex to make the content center the image and adjust heading and text color */
+header {
+    position: relative;
+    background-image: url('../images/main-banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* use individual div to overlay background color and adjust the size and position */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    top: 10%;
+    /* adjust the opacity */
+    background-color: rgba(34, 34, 34, 0.8); 
+    /* make overlay in front of the image */
+    z-index: 1;
+}
+
+/* make content in front of the image */
+header .wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+/* adjust margin and padding for content, and change the font weight */
+header h1 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+header p {
+    padding-bottom: 20px;
+    padding-top: 5px;
+    font-weight: normal;
+}
+
+/* add background to button and adjust the size and color for both font and background */
+header p a {
+    font-size: 1rem;
+    font-weight: 550;
+    text-decoration: none;
+    color: #222;
+    background-color: #c78c06;
+    padding: 20px;
+}
+
+/* make icon bigger and leave space between font and icon */
+header i.fa-caret-right {
+    margin-left: 10px;
+    font-size: 1.5rem;
+}
+
+/* add full width background color for 'about us' section and add top and bottom padding */
+#about {
+    background-color: #ffe6ac;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+/* adjust width in container for image and adjust space between content */
+#about img {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+#about p, #about h2 {
+    padding: 5px 0;
+}
+
+/* adjust all images width for service section */
+#service img {
+    width: 100%;
+}
+
+/* add background color within the wrapper and leave whith space between each service  */
+.digital, .marketing, .video, .web, .print {
+    background-color: #ffe6ac;
+    margin: 10px 0;
+}
+
+/* adjust space for service section */
+#service h2 {
+    margin-top: 30px;
+}
+
+#service h3, #service p {
+    /* add margin to make each service has their own container but not affect the image */
+    margin: 0 10px;
+}
+
+#service h3 {
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+#service p {
+    padding-bottom: 30px;
+}
+
+/* add background to button and adjust the size and color for both font and background, adjust the space around the button */
+#service p a {
+    font-size: 1rem;
+    font-weight: normal;
+    text-decoration: none;
+    color: white;
+    background-color: #222;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+/* make icon bigger and leave space between font and icon */
+#service i.fa-caret-right {
+    margin-left: 10px;
+    font-size: 1.5rem;
+}
+
+/* remove the individual container for vision part to make content match the only main wrapper */
+#service .vision h3, #service .vision p {
+    margin: 0;
+}
+
+/* adjust the space for vision content */
+#service .vision p {
+    padding-bottom: 30px;
+}
+
+#service .vision h3 {
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.print {
+    margin-bottom: 20px;
+}
+
+/* add full width background image, adjust image size and position, use flex to make content center the image and change the text font weight */
+.vision {
+    background-image: url('../images/vision.jpg');
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: normal;
+}
+
+/* adjust opacity for button background and add bolder for it */
+#service .vision .wrapper p a {
+    background-color: rgba(34, 34, 34, 0.8);
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c78c06;
+}
+
+/* leave space between service section and team section */
+#team {
+    margin-top: 30px;
+}
+
+/* adjust team image width to match the container */
+#team img {
+    width: 100%;
+}
+
+/* add background color for text and adjust space */
+.john, .bob {
+    background-color: #ffe6ac;
+    margin: 10px 0;
+}
+
+#team h3 {
+    padding-top: 5px;
+}
+
+#team p {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+/* use margin to make the text in their own container but not affect the image */
+#team h3, #team h4, #team p {
+    margin: 0 10px;
+}
+
+/* add bottom line to heading 4 */
+#team h4 {
+    border-bottom-width: 1.5px;
+    border-bottom-color: #c78c06;
+    border-bottom-style: solid;
+}
+
+/* adjust heading space */
+#contact h2 {
+    margin-top: 40px;
+}
+
+#contact h3 {
+    margin-top: 10px;
+}
+
+/* full width input form and set the height for them */
+.message form input, .message form textarea {
+    width: 100%;
+}
+
+.message form input {
+    height: 25px;
+}
+
+.message form textarea {
+    height: 125px;
+    margin-bottom: 10px;
+    /* remove the diagonal line in the bottom right corner of textarea */
+    resize: none;
+}
+
+/* adjust label font size */
+.message label {
+    font-size: 0.8rem;
+}
+
+/* add background color for send button and change font style, adjust the size of background color */
+.message p a {
+    text-decoration: none;
+    color: #c78c06;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #222;
+    padding: 2px 5px;
+}
+
+/* add border and adjust top and bottom space for each table head and body, adjust font size */
+.table th, .table td {
+    border-style: solid;
+    border-width: 1.3px;
+    padding: 10px 0;
+    font-size: 0.7rem;
+}
+
+/* full width table and leave space between heading and table */
+.table table {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* adjust left space for table body and add background color for table head */
+.table td {
+    padding-left: 10px;
+}
+
+.table th {
+    background-color: #ffe6ac;
+}
+
+/* adjust space for heading and adjust size for map */
+.location h3 {
+    margin: 5px 0;
+}
+
+.map {
+    width: 100%;
+    height: 300px;
+}
+
+/* add background color and change font color&weight  for footer, adjust background size andspace between content */
+footer {
+    background-color: #222;
+    color: #c78c06;
+    height: 70px;
+    font-weight: 400;
+    margin-top: 5px;
+    padding-top: 15px;
+}
+
+footer p {
+    padding: 4px 0;
+}
+
+footer p a {
+    color: #c78c06;
+}
+
+/* desktop media query */
+@media screen and (min-width: 760px) {
+
+    /* change width of wrapper and make nav font size smaller */
+    .wrapper {
+        width: 85%;
+    }
+
+    nav {
+        font-size: 0.9rem;
+    }
+
+    /* change logo background color to black and make logo flex to adjust background color horizontal alignment*/
+    nav h1 {
+        background-color: #222;
+        display: flex;
+    }
+
+    /* adjust the logo size */
+    nav h1 img {
+        width: 80%;
+        height: auto;
+    }
+
+    /* use flex to make navigation elements in row line and center, let space around them */
+    nav .wrapper, nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /* adjust 'Home' list background color size */
+    nav ul li:nth-child(1) {
+        padding: 15px 30px;
+    }
+
+    /* make navigation list have more space within the container */
+    nav ul {
+        flex-grow: 2;
+    }
+
+    /* adjust search input and icon size */
+    nav form {
+        height: 30px;
+    }
+
+    i.fa-magnifying-glass {
+        padding: 5px 6px 9px 5px;
+    }
+
+    /* adjust header text background color size and content padding*/
+    .overlay {
+        width: 85%;
+    }
+
+    header .wrapper {
+        padding-left: 10px;
+        padding-right: 70px;
+    }
+
+    /* adjust 'aboutus' section image size and make text on the right of image, add gap between image and text */
+    #about .wrapper {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    #about img {
+        width: 50%;
+    }
+
+    .abouttext {
+        margin-left: 10px;
+    }
+
+    /* make service-1 and service-2 flex individually, to achieve two up and three down, add gap between them */
+    .service-1, .service-2 {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .digital, .video, .web {
+        margin-right: 10px;
+    }
+
+    .video, .web, .print {
+        margin-top: 0;
+    }
+
+    /* use flex to make button background match their own container width and center the content within the button, adjust leaving space */
+    .service-1 p a, .service-2 p a {
+        display: flex;
+        justify-content: center;
+    }
+
+    #service .service-1 p ,#service .service-2 p {
+        padding: 0;
+    }
+
+    #service .service-1 p a,#service .service-2 p a {
+        margin-bottom: 10px;
+    }
+    
+    /* use flexbox to make text on the right of the image and adjust image width */
+    .john {
+        display: flex;
+    }
+
+    #team .john img, #team .bob img {
+        width: 50%;
+    }
+
+    /* use flexbox to make text on the left of the image */
+    .bob {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    /* remove the gap between john and bob section */
+    .john, .bob {
+        margin: 0;
+    }
+
+    /* leave more space between heading and content */
+    .john {
+        margin-top: 10px;
+    }
+
+    /* use grid to make contact section has two columns and add gap between each grid */
+    .contactus {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+    }
+
+    /* make message grid on the top left side, location grid on the top right side, and table grid below them */
+    .message {
+        grid-column: 1/2;
+    }
+
+    .table {
+        grid-column: 1/3;
+    }
+
+    .location {
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+
+    /* reduce the height of textarea */
+    .message form textarea {
+        height: 100px;
+    }
+
+    /* leave more space between heading and grid */
+    #contact h2 {
+        margin-bottom: 20px;
+    }
+
+    /* leave more space between table content and footer */
+    .table {
+        margin-bottom: 5px;
+    }
+}
